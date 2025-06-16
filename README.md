@@ -46,9 +46,9 @@ Lango is a next-generation decentralized application (dApp) designed for anonymo
 ## **Add Lango Token to Your Wallet**  
 Manually add **Lango token** to your wallet on **APTOS**:  
 
-**Contract Address:** `0xF63cFCE89397a98a53FC0eb347eFb1E2DA87346D`  
+**Contract Address:** `0x5a5d125b5d1c3b57cc8b0901196139bff53c53d7d27dc8c27edea4190fa7f381::lango`  
 
-🔗 **[Verify the Contract -> Verify Lango]**  
+<!-- 🔗 **[Verify the Contract -> Verify Lango]**   -->
 
 ---
 
