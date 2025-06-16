@@ -954,7 +954,7 @@ const handleConfirm = async () => {
             <button
                       onClick={() =>{
                         handleStartLesson(lessons[0])
-                        // setShowAIExamModal(true)
+                        // // setShowAIExamModal(true)
                       }
                       } 
                       
