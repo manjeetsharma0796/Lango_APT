@@ -29,7 +29,7 @@ Lango is a next-generation decentralized application (dApp) designed for anonymo
 - **Peer Review & Community Feedback:** Get corrections and insights from fellow learners.  
 - **NFT-Based Language Certificates:** Earn verifiable blockchain-based certificates upon course completion.  
 
-## **New Features in APTOS SEMESTER 3**  
+## **New Features in APTOS**  
 🚀 **Advanced AI Conversation Practice** – Engage in AI-powered dialogues for immersive learning.  
 📢 **Grammar & Pronunciation Checker** – Instant AI feedback on spoken and written input.  
 📚 **Custom Learning Paths** – Follow AI-suggested courses based on progress.  
@@ -42,9 +42,6 @@ Lango is a next-generation decentralized application (dApp) designed for anonymo
 ✅ **DeFi Integration** – Adds financial value to education through token-based rewards.  
 ✅ **Enhanced AI Experience** – AI-driven learning ensures personalized progress.  
 ✅ **Privacy-Focused** – Anonymity and security at the core of the platform.  
-
-## **Add Lango Token to Your Wallet**  
-Manually add **Lango token** to your wallet on **APTOS**:  
 
 **Contract Address:** `0x5a5d125b5d1c3b57cc8b0901196139bff53c53d7d27dc8c27edea4190fa7f381::lango`  
 
