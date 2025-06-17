@@ -9,7 +9,7 @@ const LandingPage = () => {
   // const { authState, ocAuth } = useOCAuth();
 
   // Ensure authState is defined before accessing its properties
- 
+
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -31,7 +31,7 @@ const LandingPage = () => {
                 <a href="#" className="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-300">
                   Get Tokens
                 </a>
-                <WalletSelector/>
+                <WalletSelector />
               </div>
             </div>
           </div>

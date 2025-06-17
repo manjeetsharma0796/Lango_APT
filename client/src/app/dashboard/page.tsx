@@ -69,29 +69,12 @@ declare global {
 const DashboardPage = () => {
 
   const { account, connected, disconnect, wallet } = useWallet();
-
-
   // Uncomment and use the wallet client hook to get the client instance
   const { client } = useWalletClient();
-
   // const queryClient = useQueryClient();
-
   const [messageContent, setMessageContent] = useState<string>();
   const [newMessageContent, setNewMessageContent] = useState<string>();
-
-
   const address = "0x5a5d125b5d1c3b57cc8b0901196139bff53c53d7d27dc8c27edea4190fa7f381";
-
-
-
-
- 
-
-
-
-
-
-
 
   const [walletConnected, setWalletConnected] = useState(false)
   const [showDropdown, setShowDropdown] = useState(false)
@@ -167,15 +150,15 @@ const DashboardPage = () => {
   //   donateInititate()
   //   // Additional logic for starting the lesson
   // }
-const handleConfirm = async () => {
-  setShowConfirmation(false);
-  await donateInititate(); // Wait for this to finish
-  setShowAIExamModal(true); // Now show the AI modal
-};
+  const handleConfirm = async () => {
+    setShowConfirmation(false);
+    await donateInititate(); // Wait for this to finish
+    setShowAIExamModal(true); // Now show the AI modal
+  };
 
 
 
-// ethereum func
+  // ethereum func
 
   // const donateInititate = async () => {
   //   const claimAmt = 10
@@ -203,7 +186,7 @@ const handleConfirm = async () => {
   // }
 
 
-   const donateInititate = async () => {
+  const donateInititate = async () => {
     if (!client) {
       return;
     }
@@ -211,7 +194,7 @@ const handleConfirm = async () => {
     try {
       const committedTransaction = await client.useABI(LANGO_ABI).transfer({
         type_arguments: [],
-        arguments: [address,5000000000],
+        arguments: [address, 5000000000],
       });
       const executedTransaction = await aptosClient().waitForTransaction({
         transactionHash: committedTransaction.hash,
@@ -227,8 +210,6 @@ const handleConfirm = async () => {
       console.error(error);
     }
   };
-
-
 
   // const withdrawInititate = async () => {
   //   setShowDropdown(!showDropdown)
@@ -250,7 +231,7 @@ const handleConfirm = async () => {
   //   await (await humorTokenContract.mint(address, ethers.parseUnits(claimAmt.toString(), 18))).wait()
   // }
 
-   const withdrawInititate = async () => {
+  const withdrawInititate = async () => {
     if (!account || !client) {
       return;
     }
@@ -258,7 +239,7 @@ const handleConfirm = async () => {
     try {
       const committedTransaction = await client.useABI(LANGO_ABI).mint({
         type_arguments: [],
-        arguments: [account.address.toString(),10000000000],
+        arguments: [account.address.toString(), 10000000000],
       });
       const executedTransaction = await aptosClient().waitForTransaction({
         transactionHash: committedTransaction.hash,
@@ -776,15 +757,14 @@ const handleConfirm = async () => {
                   {question.options.map((option, optIndex) => (
                     <div
                       key={optIndex}
-                      className={`p-2 rounded-md ${
-                        option === question.correctAnswer && option === userAnswers[index]
+                      className={`p-2 rounded-md ${option === question.correctAnswer && option === userAnswers[index]
                           ? "bg-green-100 border border-green-300"
                           : option === question.correctAnswer
                             ? "bg-green-50 border border-green-200"
                             : option === userAnswers[index]
                               ? "bg-red-100 border border-red-300"
                               : "bg-gray-50 border border-gray-200"
-                      }`}
+                        }`}
                     >
                       <div className="flex items-start justify-between">
                         <span>{option}</span>
@@ -799,9 +779,8 @@ const handleConfirm = async () => {
                     <span className="text-sm font-medium mr-2">Your answer:</span>
                     {userAnswers[index] ? (
                       <span
-                        className={`text-sm font-medium ${
-                          userAnswers[index] === question.correctAnswer ? "text-green-600" : "text-red-600"
-                        }`}
+                        className={`text-sm font-medium ${userAnswers[index] === question.correctAnswer ? "text-green-600" : "text-red-600"
+                          }`}
                       >
                         {userAnswers[index]}
                         {userAnswers[index] === question.correctAnswer ? " ✓" : " ✗"}
@@ -907,7 +886,7 @@ const handleConfirm = async () => {
                   </div>
                 )}
               </div>
-             <WalletSelector/>
+              <WalletSelector />
             </div>
           </div>
         </div>
@@ -952,17 +931,17 @@ const handleConfirm = async () => {
               </div>
             </div>
             <button
-                      onClick={() =>{
-                        handleStartLesson(lessons[0])
-                        // // setShowAIExamModal(true)
-                      }
-                      } 
-                      
-                      className="px-4 py-2 ml-[500px] bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-medium hover:shadow-lg transition-shadow duration-300"
-                      
-                    >
-                     Start Assesment
-                    </button>
+              onClick={() => {
+                handleStartLesson(lessons[0])
+                // // setShowAIExamModal(true)
+              }
+              }
+
+              className="px-4 py-2 ml-[500px] bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-sm font-medium hover:shadow-lg transition-shadow duration-300"
+
+            >
+              Start Assesment
+            </button>
             <ChevronRight size={20} className="text-gray-500" />
           </div>
         </div>
